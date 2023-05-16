@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/Navbar"
 import { Container, Row } from "reactstrap"
 import { useState } from "react"
 import NavBarTest from "./components/navbarTest/Navbartest"
+import Home from "./pages/Home"
 
 const App = () => {
   const [playList, setPlayList] = useState([])
@@ -30,7 +31,8 @@ const App = () => {
 
   return(
     <div className="app">
-      <Navbar playlist={playList} removeTrackFromNavBar={removeTrack} removeAllTrackFromNavBar={removeAllTrack}/>
+      <Home />
+      {/* <Navbar playlist={playList} removeTrackFromNavBar={removeTrack} removeAllTrackFromNavBar={removeAllTrack}/>
       <Container style={{marginTop: '100px'}}>
         <Row>
             {
@@ -41,7 +43,7 @@ const App = () => {
         </Row>
            
             
-      </Container>
+      </Container> */}
     </div>
    
   )
