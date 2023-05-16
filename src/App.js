@@ -32,7 +32,7 @@ const App = () => {
   return(
     <div className="app">
       <Home />
-      {/* <Navbar playlist={playList} removeTrackFromNavBar={removeTrack} removeAllTrackFromNavBar={removeAllTrack}/>
+      <Navbar playlist={playList} removeTrackFromNavBar={removeTrack} removeAllTrackFromNavBar={removeAllTrack}/>
       <Container style={{marginTop: '100px'}}>
         <Row>
             {
@@ -43,7 +43,7 @@ const App = () => {
         </Row>
            
             
-      </Container> */}
+      </Container>
     </div>
    
   )
