@@ -26,7 +26,7 @@ function NavBar({playlist, removeTrackFromNavBar, removeAllTrackFromNavBar}) {
 
   return (
     <div>
-      <Nav style={{height: '10vh'}}>
+      <Nav style={{height: '10vh', backgroundColor: 'green'}}>
         <NavItem>
             <NavLink>
               <Link to="/">Home</Link>
