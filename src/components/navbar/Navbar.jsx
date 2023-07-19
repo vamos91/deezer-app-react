@@ -9,6 +9,7 @@ import {
   DropdownItem,
 } from 'reactstrap';
 import { FaTrashAlt } from "react-icons/fa";
+import {Link} from 'react-router-dom'
 
 
 function NavBar({playlist, removeTrackFromNavBar, removeAllTrackFromNavBar}) {
@@ -27,32 +28,26 @@ function NavBar({playlist, removeTrackFromNavBar, removeAllTrackFromNavBar}) {
     <div>
       <Nav style={{height: '10vh'}}>
         <NavItem>
-            <NavLink
-            active
-            href="#"
-            >
-            Link
+            <NavLink>
+              <Link to="/">Home</Link>
             </NavLink>
         </NavItem>
         <NavItem>
-            <NavLink href="#">
-            Another Link
+            <NavLink>
+              <Link to="/music">Music</Link>
             </NavLink>
         </NavItem>
         <NavItem>
-            <NavLink
-            disabled
-            href="#"
-            >
-            Disabled Link
+            <NavLink>
+              <Link to="/contact">Contact</Link>
             </NavLink>
         </NavItem>
             <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-            <DropdownToggle caret>Playlist ({playlist.length})</DropdownToggle>
+            <DropdownToggle caret>Playlist ({playlist ? playlist.length : '0'})</DropdownToggle>
             <DropdownMenu>
                 <button onClick={() => deleteAll()}>Delete All</button>
                 {
-                    playlist.map((track, i) => (
+                    playlist && playlist.map((track, i) => (
                     <div key={i} style={{display: 'flex', alignItems: 'center', padding: '10px'}}>
                         <DropdownItem>{track}</DropdownItem>
                         <FaTrashAlt onClick={() => removeTrack(track)}/>
