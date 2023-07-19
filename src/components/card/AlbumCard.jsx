@@ -9,6 +9,7 @@ import {
     Col
 } from 'reactstrap'
 
+
 const AlbumCard = ({title, cover, mp3, handleParentClick, isClicked}) => {
     
     const addToplaylist = (myTitle) => {
